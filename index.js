@@ -10,6 +10,6 @@ const host = process.env.HOST || 'localhost';
 const port = process.env.PORT || 3001;
 
 app.listen(port, host, () => {
-  console.log('listening on ' + host + ':' + port);
+  console.log('Listening on ' + host + ':' + port);
 });
 
