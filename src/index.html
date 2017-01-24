@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" ng-app="tabrath">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>tabrath's blog</title>
+        <base href="/">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+        <!--<![endif]-->
+    
+        <!--[if lt IE 9]>
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" href="/bundle.min.css">
+    </head>
+    <body>
+        <div id="layout" class="pure-g">
+            <div class="sidebar pure-u-1 pure-u-md-1-4">
+                <div class="header">
+                    <h1 class="brand-title">tabrath's blog</h1>
+                    <h2 class="brand-tagline">ramblings of a developer</h2>
+
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a ng-href="/" class="pure-button">Blog</a></li>
+                            <li class="nav-item"><a ng-href="/ipfs" class="pure-button">IPFS</a></li>
+                            <li class="nav-item"><a ng-href="/multiformats" class="pure-button">Multiformats</a></li>
+                            <li class="nav-item"><a ng-href="/libp2p" class="pure-button">LibP2P</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="content pure-u-1 pure-u-md-3-4">
+                <ng-view></ng-view>
+
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal">
+                        <ul>
+                            <li class="pure-menu-item"><a href="https://github.com/tabrath" class="pure-menu-link">Github</a></li>
+                            <li class="pure-menu-item"><a href="https://twitter.com/tabrath" class="pure-menu-link">Twitter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="/vendor/angular/angular.js"></script>
+    <script src="/vendor/angular-animate/angular-animate.min.js"></script>
+    <script src="/vendor/angular-aria/angular-aria.min.js"></script>
+    <script src="/vendor/angular-resource/angular-resource.min.js"></script>
+    <script src="/vendor/angular-route/angular-route.min.js"></script>
+    <script src="/bundle.min.js"></script>
+    <script src="/templates.js"></script>
+    <script src="/reload/reload.js"></script>
+</html>

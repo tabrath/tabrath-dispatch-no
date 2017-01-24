@@ -1,0 +1,18 @@
+{
+  "name": "tabrath.dispatch.no",
+  "description": "tabrath's blog",
+  "main": "index.js",
+  "authors": [
+    "Trond Bråthen <tabrath@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

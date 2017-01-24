@@ -1,4 +1,4 @@
 apps:
-  - script: index.js
+  - script: bin/www
     name: 'tabrath.dispatch.no'
     watch: true

@@ -4,12 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp build",
+    "start": "npm run build && ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.14.0"
+    "body-parser": "^1.16.0",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "reload": "^1.1.0",
+    "vinyl-paths": "^2.1.0"
   }
 }
