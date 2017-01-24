@@ -5,8 +5,8 @@
   "authors": [
     "Trond Bråthen <tabrath@gmail.com>"
   ],
-  "license": "ISC",
-  "homepage": "",
+  "license": "MIT",
+  "homepage": "tabrath.dispatch.no",
   "private": true,
   "ignore": [
     "**/.*",
@@ -14,5 +14,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular-animate": "^1.6.1",
+    "angular-aria": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "angular-resource": "^1.6.1"
+  }
 }
