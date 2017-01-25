@@ -1,19 +1,24 @@
 angular.module('tabrath', ['ngRoute', 'ngAnimate', 'ngAria', 'ngResource'])
-    .config(['$locationProvider', '$routeProvider', function config($locationProvider, $routeProvider) {
+    .config(['$locationProvider', '$routeProvider', '$httpProvider', function config($locationProvider, $routeProvider, $httpProvider) {
         $routeProvider.
             when('/', {
-                templateUrl: '/templates/home.html'
+                controller: 'BlogController',
+                templateUrl: '/templates/blog.html'
             }).
             when('/ipfs', {
-                templateUrl: '/templates/ipfs.html'
+                controller: 'IpfsController',
+                templateUrl: '/templates/modules.html'
             }).
             when('/multiformats', {
-                templateUrl: '/templates/multiformats.html'
+                controller: 'MultiformatsController',
+                templateUrl: '/templates/modules.html'
             }).
             when('/libp2p', {
-                templateUrl: '/templates/libp2p.html'
+                controller: 'LibP2PController',
+                templateUrl: '/templates/modules.html'
             }).
             otherwise('/');
         
         $locationProvider.html5Mode(true);
+        $httpProvider.defaults.cache = true;
     }]);

@@ -10,37 +10,42 @@ const server = require('./');
 const http = require('http');
 const reload = require('reload');
 
-gulp.task('clean', () => {
-    return del(['dist/**/*']);
+gulp.task('clean', (cb) => {
+    return del(['dist/**/*'], cb);
 });
 
-gulp.task('build:css', () => {
+gulp.task('build:css', ['clean'], () => {
     return gulp.src('src/**/*.css')
         .pipe(clean({ compatibility: 'ie8' }))
         .pipe(concat('bundle.min.css'))
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build:js', () => {
+gulp.task('build:js', ['clean'], () => {
     return gulp.src('src/app/**/*.js')
         .pipe(uglify())
         .pipe(concat('bundle.min.js'))
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build:html', () => {
+gulp.task('build:html', ['clean'], () => {
     return gulp.src('src/*.html')
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build:templates', () => {
+gulp.task('build:templates', ['clean'], () => {
     return gulp.src('src/app/templates/**/*.html')
         .pipe(templateCache({ module: 'tabrath', root: '/templates' }))
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('build', ['clean', 'build:css', 'build:js', 'build:html', 'build:templates'], () => { });
+gulp.task('build:img', ['clean'], () => {
+    return gulp.src('src/img/**/*')
+        .pipe(gulp.dest('dist/img/'));
+});
+
+gulp.task('build', ['clean', 'build:css', 'build:js', 'build:html', 'build:templates', 'build:img'], () => { });
 
 var reloadServer;
 

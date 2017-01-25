@@ -1,0 +1,27 @@
+/*.page.ng-enter,
+.page.ng-leave {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.page.ng-enter {
+    opacity: 0;
+    display: block;
+}
+
+.page.ng-enter-active {
+    opacity: 1;
+}
+
+.page.ng-leave {
+    opacity: 1;
+    display: block;
+}
+
+.page.ng-leave-active {
+    opacity: 0;
+}
+*/
