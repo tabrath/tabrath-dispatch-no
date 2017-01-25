@@ -3,7 +3,7 @@
     {
       "name": "tabrath.dispatch.no",
       "script": "bin/www",
-      "cwd": "/home/tabrath/www/tabrath.dispatch.no/deploy/bin",
+      "cwd": "/home/tabrath/www/tabrath.dispatch.no/deploy",
       "watch": true
     }
   ]
