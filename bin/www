@@ -2,6 +2,6 @@
 
 const server = require('../');
 
-server.app.listen(server.app.get('port'), server.app.get('host'), () => {
+server.server.listen(server.app.get('port'), server.app.get('host'), () => {
   console.log('Listening on ' + server.app.get('host') + ':' + server.app.get('port') + ' and ready to rock');
 });
