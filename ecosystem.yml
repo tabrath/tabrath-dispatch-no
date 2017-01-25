@@ -1,5 +1,0 @@
-apps:
-  - script: 'bin/www'
-    cwd: '/home/tabrath/www/tabrath.dispatch.no/deploy/'
-    name: 'tabrath.dispatch.no'
-    watch: true

@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "tabrath.dispatch.no",
+      "script": "bin/www",
+      "cwd": "/home/tabrath/www/tabrath.dispatch.no/deploy/",
+      "watch": true
+    }
+  ]
+}
