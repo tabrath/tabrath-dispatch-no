@@ -7,15 +7,13 @@
     
     <section class="post" ng-hide="posts.length === 0" ng-repeat="post in posts | orderBy:'published'">
         <header class="post-header">
-            <img src="/assets/img/avatar.png" alt="" width="48" height="48" class="post-avatar">
+            <img src="/assets/img/avatar.jpg" alt="" width="48" height="48" class="post-avatar">
             <h2 class="post-title">{{post.title}}</h2>
             <p class="post-meta">
                 By {{post.author}} under
-                <a ng-href="#" class="post-category" ng-repeat="category in post.categories">{{category.name}}</a>
+                <a ng-href="#" class="post-category" ng-repeat="category in post.categories">{{category}}</a>
             </p>
-            <div class="post-description">
-                <p>{{post.description}}</p>
-            </div>
+            <div class="post-description" marked="post.description"></div>
         </header>
     </section>
 </div>

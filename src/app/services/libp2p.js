@@ -25,7 +25,6 @@ angular.module('tabrath').factory('LibP2P', [function() {
             name: 'LibP2P',
             organization: 'https://github.com/libp2p',
             specification: 'https://github.com/libp2p/specs',
-            //image: 'https://avatars2.githubusercontent.com/u/14838238?v=3&s=200',
             image: 'https://raw.githubusercontent.com/diasdavid/specs/libp2p-spec/protocol/network/figs/logo.png',
             description: 'Modular peer-to-peer networking stack (used by IPFS and others)'
         },
