@@ -22,7 +22,12 @@ gulp.task('build:css', ['clean'], () => {
 });
 
 gulp.task('build:js', ['clean'], () => {
-    return gulp.src('src/app/**/*.js')
+    return gulp.src([
+            'src/app/*.js',
+            'src/app/services/**/*.js',
+            'src/app/controllers/**/*.js',
+            'src/app/directives/**/*.js',
+        ])
         .pipe(uglify())
         .pipe(concat('bundle.min.js'))
         .pipe(gulp.dest('dist'));

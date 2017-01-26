@@ -71,7 +71,8 @@ h3 {
     font-size: 75%;
 }
 .nav-item a:hover,
-.nav-item a:focus {
+.nav-item a:focus,
+.pure-button.active {
     border: 2px solid rgb(61, 146, 201);
     text-decoration: none;
 }
@@ -131,13 +132,13 @@ h3 {
     background: #999;
     font-size: 80%;
 }
-    .post-category-design {
+    .post-category-ipfs {
         background: #5aba59;
     }
-    .post-category-pure {
+    .post-category-multiformats {
         background: #4d85d1;
     }
-    .post-category-yui {
+    .post-category-libp2p {
         background: #8156a7;
     }
     .post-category-js {

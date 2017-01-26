@@ -1,4 +1,6 @@
-<div class="posts">
+<div ng-show="!project">Project not found.</div>
+
+<div class="posts" ng-hide="!project">
     <img ng-src="{{project.image}}" alt="">
     <h1 class="content-subhead">{{project.name}}</h1>
     <p class="post-description">{{project.description}}</p>
@@ -6,11 +8,11 @@
         <a ng-href="{{project.organization}}">Organization</a> | <a ng-href="{{project.specification}}">Specification</a>
     </p>
 
-    <div ng-show="modules.length === 0">
+    <div ng-show="project.modules.length === 0">
         <p>No modules available yet.</p>
     </div>
     
-    <section class="post" ng-hide="modules.length === 0" ng-repeat="module in modules | orderBy:'name'">
+    <section class="post" ng-hide="modules.length === 0" ng-repeat="module in project.modules | orderBy:'name'" id="{{module.id}}">
         <header class="post-header">
             <img ng-src="{{module.icon}}" alt="" width="48" height="48" class="post-avatar">
             <h2 class="post-title">{{module.name}} <a ng-href="{{module.repository}}"><img src="/assets/img/github.png" width="24" height="24" alt="github"></a></h2>

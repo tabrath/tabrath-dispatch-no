@@ -1,0 +1,16 @@
+    <div ng-show="projects.length === 0">
+        <p>No projects available yet.</p>
+    </div>
+    
+    <section class="post" ng-hide="projects.length === 0" ng-repeat="project in projects | orderBy:'name'" id="{{project.id}}">
+        <header class="post-header">
+            <img ng-src="{{project.image}}" alt="" width="48" height="48" class="post-avatar">
+            <h2 class="post-title"><a ng-href="/projects/{{project.id}}">{{project.name}}</a></h2>
+            <p class="post-meta">
+                <a ng-href="{{project.organization}}" class="post-category post-category-{{project.id}}">Organization</a>
+                <a ng-href="{{project.specification}}" class="post-category post-category-{{project.id}}">Specification</a>
+                <a ng-href="/projects/{{project.id}}#{{module.id}}" target="_self" class="post-category post-category-{{project.id}}" ng-repeat="module in project.modules | orderBy: 'name'">{{module.name}}</a>
+            </p>
+            <div class="post-description" marked="project.description"></div>
+        </header>
+    </section>
